@@ -1,10 +1,12 @@
 ﻿using System.Threading.Tasks;
 using DataConversions.Converters;
+using JetBrains.Annotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DataConversions.Tests.Converters;
 
 [TestClass]
+[TestSubject(typeof(XmlToJsonConverter))]
 public class XmlToJsonConverterTests
 {
     [TestMethod]
