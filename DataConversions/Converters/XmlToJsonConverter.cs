@@ -25,8 +25,8 @@ public sealed class XmlToJsonConverter : DataConverter<XDocument, string>
     }
     
     /// <summary>
-    ///     Traverses the xml recursively to convert each node
-    /// to convert each element to json. Uses both dictionary and values which can be parsed to json
+    ///     Traverses the xml recursively to convert each node each element to json.
+    /// Uses both dictionary and values which can be parsed to json.
     /// <code>
     /// if (node has no children)
     /// {
