@@ -1,0 +1,7 @@
+﻿<Root>
+    <Person>
+        <Name>John Doe</Name>
+        <Age>30</Age>
+        <Occupation>Software Developer</Occupation>
+    </Person>
+</Root>

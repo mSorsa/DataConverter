@@ -1,0 +1,15 @@
+﻿<Device>
+    <ID>2001</ID>
+    <Model>X1000</Model>
+    <Enabled>true</Enabled>
+    <Tags>
+        <Tag>electronics</Tag>
+        <Tag>gadget</Tag>
+        <Tag/> <!-- Represents null -->
+    </Tags>
+    <Dimensions>
+        <Height>10.5</Height>
+        <Width></Width> <!-- Represents different null -->
+        <Depth>7.4</Depth>
+    </Dimensions>
+</Device>

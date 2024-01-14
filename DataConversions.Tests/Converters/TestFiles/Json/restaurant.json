@@ -1,0 +1,11 @@
+﻿{
+  "Restaurant": {
+    "Name": "Café del Sol",
+    "Address": "1234 El Camino Real",
+    "Dishes": ["Tacos", "Burritos", "Quesadillas"],
+    "Specials": {
+      "Monday": "The \"Best\" Burger",
+      "Friday": "Fish & Chips"
+    }
+  }
+}

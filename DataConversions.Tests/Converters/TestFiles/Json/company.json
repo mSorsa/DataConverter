@@ -1,0 +1,17 @@
+﻿{
+  "Company": {
+    "Name": "Tech Solutions",
+    "Employees": [
+      {
+        "Name": "Alice Smith",
+        "Department": "Development",
+        "Position": "Team Lead"
+      },
+      {
+        "Name": "Bob Johnson",
+        "Department": "Testing",
+        "Position": "Quality Analyst"
+      }
+    ]
+  }
+}

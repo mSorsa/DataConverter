@@ -1,0 +1,12 @@
+﻿[
+  {
+    "ProductID": 101,
+    "ProductName": "Keyboard",
+    "Price": 29.99
+  },
+  {
+    "ProductID": 102,
+    "ProductName": "Mouse",
+    "Price": 19.99
+  }
+]

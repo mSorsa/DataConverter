@@ -1,0 +1,21 @@
+﻿<Books>
+    <Book>
+        <Title>The Great Gatsby</Title>
+        <Author>F. Scott Fitzgerald</Author>
+        <Year>1925</Year>
+        <Genres>
+            <Genre>Novel</Genre>
+            <Genre>Fiction</Genre>
+        </Genres>
+    </Book>
+    <Book>
+        <Title>1984</Title>
+        <Author>George Orwell</Author>
+        <Year>1949</Year>
+        <Genres>
+            <Genre>Dystopian</Genre>
+            <Genre>Political fiction</Genre>
+            <Genre>Social science fiction</Genre>
+        </Genres>
+    </Book>
+</Books>

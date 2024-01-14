@@ -1,0 +1,13 @@
+﻿<Restaurant>
+    <Name>Café del Sol</Name>
+    <Address>1234 El Camino Real</Address>
+    <Dishes>
+        <Dish>Tacos</Dish>
+        <Dish>Burritos</Dish>
+        <Dish>Quesadillas</Dish>
+    </Dishes>
+    <Specials>
+        <Monday>The "Best" Burger</Monday>
+        <Friday>Fish &amp; Chips</Friday>
+    </Specials>
+</Restaurant>

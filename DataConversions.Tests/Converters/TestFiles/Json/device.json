@@ -1,0 +1,13 @@
+﻿{
+  "Device": {
+    "ID": 2001,
+    "Model": "X1000",
+    "Enabled": true,
+    "Tags": ["electronics", "gadget", null],
+    "Dimensions": {
+      "Height": 10.5,
+      "Width": null,
+      "Depth": 7.4
+    }
+  }
+}

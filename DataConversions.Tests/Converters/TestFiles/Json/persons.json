@@ -1,0 +1,7 @@
+﻿{
+  "Person": {
+    "Name": "John Doe",
+    "Age": 30,
+    "Occupation": "Software Developer"
+  }
+}

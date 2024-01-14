@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConversions", "DataConversions\DataConversions.csproj", "{9FA9EF48-AD16-4796-ACF5-9036507D4911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConversions.Tests", "DataConversions.Tests\DataConversions.Tests.csproj", "{D415FB00-00C6-4AFC-AFFE-86B6A1D248F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FA9EF48-AD16-4796-ACF5-9036507D4911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA9EF48-AD16-4796-ACF5-9036507D4911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA9EF48-AD16-4796-ACF5-9036507D4911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA9EF48-AD16-4796-ACF5-9036507D4911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D415FB00-00C6-4AFC-AFFE-86B6A1D248F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D415FB00-00C6-4AFC-AFFE-86B6A1D248F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D415FB00-00C6-4AFC-AFFE-86B6A1D248F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D415FB00-00C6-4AFC-AFFE-86B6A1D248F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

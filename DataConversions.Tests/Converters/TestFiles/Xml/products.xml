@@ -1,0 +1,12 @@
+﻿<Products>
+    <Product>
+        <ProductID>101</ProductID>
+        <ProductName>Keyboard</ProductName>
+        <Price>29.99</Price>
+    </Product>
+    <Product>
+        <ProductID>102</ProductID>
+        <ProductName>Mouse</ProductName>
+        <Price>19.99</Price>
+    </Product>
+</Products>

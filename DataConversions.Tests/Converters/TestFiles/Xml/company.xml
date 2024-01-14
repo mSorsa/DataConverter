@@ -1,0 +1,15 @@
+﻿<Company>
+    <Name>Tech Solutions</Name>
+    <Employees>
+        <Employee>
+            <Name>Alice Smith</Name>
+            <Department>Development</Department>
+            <Position>Team Lead</Position>
+        </Employee>
+        <Employee>
+            <Name>Bob Johnson</Name>
+            <Department>Testing</Department>
+            <Position>Quality Analyst</Position>
+        </Employee>
+    </Employees>
+</Company>

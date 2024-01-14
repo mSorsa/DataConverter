@@ -1,0 +1,23 @@
+﻿<School>
+    <Name>Greenwood High</Name>
+    <Location>Springfield</Location>
+    <Departments>
+        <Department>
+            <Name>Science</Name>
+            <Courses>
+                <Course>Biology</Course>
+                <Course>Chemistry</Course>
+                <Course>Physics</Course>
+            </Courses>
+        </Department>
+        <Department>
+            <Name>Mathematics</Name>
+            <Courses>
+                <Course>Algebra</Course>
+                <Course>Calculus</Course>
+                <Course>Geometry</Course>
+                <Course>Statistics</Course>
+            </Courses>
+        </Department>
+    </Departments>
+</School>

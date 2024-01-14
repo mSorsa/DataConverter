@@ -1,0 +1,16 @@
+﻿{
+  "School": {
+    "Name": "Greenwood High",
+    "Location": "Springfield",
+    "Departments": [
+      {
+        "Name": "Science",
+        "Courses": ["Biology", "Chemistry", "Physics"]
+      },
+      {
+        "Name": "Mathematics",
+        "Courses": ["Algebra", "Calculus", "Geometry", "Statistics"]
+      }
+    ]
+  }
+}
