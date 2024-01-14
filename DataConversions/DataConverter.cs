@@ -1,4 +1,4 @@
-﻿namespace DataConversions.Converters;
+﻿namespace DataConversions;
 
 public abstract class DataConverter<TInType, TOutType>
 {

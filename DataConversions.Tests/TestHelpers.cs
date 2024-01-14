@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -10,10 +9,7 @@ internal static class TestHelpers
     
     internal static async Task<string> GetFileContent(string fileType, string fileName)
     {
-        var assemblyName = Assembly.GetAssembly(typeof(TestHelpers))!.Location.Replace(".dll", "");
-        assemblyName = assemblyName[..^21];
-        
-        var filePath = Path.Combine(assemblyName, "Converters", "TestFiles", fileType, fileName);
+        var filePath = Path.Combine("Converters", "TestFiles", fileType, fileName);
         var file = File.Open(filePath, FileMode.Open);
         
         using var reader = new StreamReader(file);

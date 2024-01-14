@@ -1,6 +1,4 @@
-﻿using System.IO;
-using System.Reflection;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using DataConversions.Converters;
 using JetBrains.Annotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
