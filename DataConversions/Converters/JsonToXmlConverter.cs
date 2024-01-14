@@ -29,7 +29,7 @@ public sealed class JsonToXmlConverter : DataConverter<string, XDocument>
     /// <param name="element">the value to be converted from json to xml</param>
     /// <param name="parent">parent of value to be converted</param>
     /// <param name="cancellationToken"></param>
-    /// <exception cref="ArgumentOutOfRangeException">if value-type cannot be defined</exception>
+    /// <exception cref="ArgumentOutOfRangeException">if elements type cannot be defined</exception>
     /// <exception cref="OperationCanceledException">on time-out or request is cancelled</exception>
     private static async Task ConvertToXml(JsonElement element, XElement parent, CancellationToken cancellationToken)
     {
