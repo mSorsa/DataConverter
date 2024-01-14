@@ -9,15 +9,22 @@ namespace DataConversions.Tests.Converters;
 [TestSubject(typeof(XmlToJsonConverter))]
 public class XmlToJsonConverterTests
 {
+    private XmlToJsonConverter Sut { get; set; }
+
+    [TestInitialize]
+    public void Init()
+    {
+        Sut = new XmlToJsonConverter();
+    }
+    
     [TestMethod]
     public async Task Convert_XmlToJson_Basic_Books_Success()
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("books.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
@@ -28,10 +35,9 @@ public class XmlToJsonConverterTests
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("person.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
@@ -42,10 +48,9 @@ public class XmlToJsonConverterTests
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("company.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
@@ -56,10 +61,9 @@ public class XmlToJsonConverterTests
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("products.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
@@ -70,10 +74,9 @@ public class XmlToJsonConverterTests
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("device.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
@@ -84,10 +87,9 @@ public class XmlToJsonConverterTests
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("school.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
@@ -98,10 +100,9 @@ public class XmlToJsonConverterTests
     {
         // Arrange
         var xmlDocument = await TestHelpers.ReadXmlDocument("restaurant.xml");
-        var converter = new XmlToJsonConverter();
 
         // Act
-        var jsonResult = await converter.Convert(xmlDocument);
+        var jsonResult = await Sut.Convert(xmlDocument);
 
         // Assert
         Assert.IsNotNull(jsonResult);
