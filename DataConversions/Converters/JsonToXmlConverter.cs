@@ -8,7 +8,8 @@ public sealed class JsonToXmlConverter : DataConverter<string, XDocument>
     public override async Task<XDocument> Convert(string jsonInput, CancellationToken cancellationToken = new())
     {
         cancellationToken.ThrowIfCancellationRequested();
-        
+
+        // jsonInput = jsonInput.Replace("\r\n", "").Replace("\t", "");
         using var doc = JsonDocument.Parse(jsonInput);
         
         var root = new XElement("Root");

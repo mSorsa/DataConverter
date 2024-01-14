@@ -15,9 +15,9 @@ public sealed class XmlToJsonConverter : DataConverter<XDocument, string>
             throw new ArgumentException("XML document must have a root element.");
         }
         
-        return await Task.Run(() =>
+        return await Task.Run(async () =>
         {
-            var jsonObject = ConvertElementToJson(rootElement, cancellationToken);
+            var jsonObject = await ConvertElementToJson(rootElement, cancellationToken);
             var jsonOptions = new JsonSerializerOptions { WriteIndented = true };
             
             return JsonSerializer.Serialize(jsonObject, jsonOptions);
