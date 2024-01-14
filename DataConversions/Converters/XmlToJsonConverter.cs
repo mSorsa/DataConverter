@@ -24,6 +24,25 @@ public sealed class XmlToJsonConverter : DataConverter<XDocument, string>
         }, cancellationToken);
     }
     
+    /// <summary>
+    ///     Traverses the xml recursively to convert each node
+    /// to convert each element to json. Uses both dictionary and values which can be parsed to json
+    /// <code>
+    /// if (node has no children)
+    /// {
+    ///     return node;
+    /// }
+    /// if (node has many children)
+    /// {
+    ///     traverse each child and add it to dictionary,
+    ///     dictionary is then used by caller to parse to requested type (json)
+    /// }
+    /// </code>
+    /// </summary>
+    /// <param name="element">the element to handle, this is then used recursively to handle child-elements</param>
+    /// <param name="cancellationToken"></param>
+    /// <returns>returns object because recursive traversal. - can be string, can be dictionary, ...</returns>
+    /// <exception cref="OperationCanceledException">on time-out or request is cancelled</exception>
     private static async Task<object> ConvertElementToJson(XElement element, CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();

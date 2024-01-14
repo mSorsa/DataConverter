@@ -17,6 +17,20 @@ public sealed class JsonToXmlConverter : DataConverter<string, XDocument>
         return new XDocument(root);
     }
     
+    /// <summary>
+    ///     converts the element to xml recursively.
+    /// <code>
+    /// if (element has no child)
+    ///     return element as xml;
+    /// if (element has children)
+    ///     visit children and format them as xml
+    /// </code>
+    /// </summary>
+    /// <param name="element">the value to be converted from json to xml</param>
+    /// <param name="parent">parent of value to be converted</param>
+    /// <param name="cancellationToken"></param>
+    /// <exception cref="ArgumentOutOfRangeException">if value-type cannot be defined</exception>
+    /// <exception cref="OperationCanceledException">on time-out or request is cancelled</exception>
     private static async Task ConvertToXml(JsonElement element, XElement parent, CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
@@ -64,7 +78,7 @@ public sealed class JsonToXmlConverter : DataConverter<string, XDocument>
                 break;
             
             default:
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(element.ValueKind));
         }
     }
 }
