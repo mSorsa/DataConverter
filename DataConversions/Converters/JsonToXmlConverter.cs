@@ -74,7 +74,6 @@ public sealed class JsonToXmlConverter : DataConverter<string, XDocument>
                 break;
 
             case JsonValueKind.Null:
-                break;
             case JsonValueKind.Undefined:
                 break;
             
