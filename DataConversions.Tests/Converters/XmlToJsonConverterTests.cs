@@ -21,7 +21,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_Basic_Books_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("books.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("books");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);
@@ -34,7 +34,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_Basic_Person_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("person.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("person");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);
@@ -47,7 +47,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_Nested_Company_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("company.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("company");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);
@@ -60,7 +60,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_Array_Products_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("products.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("products");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);
@@ -73,7 +73,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_DifferentDataTypes_Device_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("device.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("device");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);
@@ -86,7 +86,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_ComplexNested_School_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("school.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("school");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);
@@ -99,7 +99,7 @@ public class XmlToJsonConverterTests
     public async Task Convert_XmlToJson_UniCodeAndSpecialCharacters_Restaurant_Success()
     {
         // Arrange
-        var xmlDocument = await TestHelpers.ReadXmlDocument("restaurant.xml");
+        var xmlDocument = await TestHelpers.ReadXmlDocument("restaurant");
 
         // Act
         var jsonResult = await Sut.Convert(xmlDocument);

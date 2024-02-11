@@ -22,7 +22,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_Basic_Books_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "books.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "books");
 
         // Act
         var result = await Sut.Convert(file);
@@ -35,7 +35,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_Basic_Person_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "persons.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "persons");
 
         // Act
         var result = await Sut.Convert(file);
@@ -48,7 +48,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_Nested_Company_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "company.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "company");
 
         // Act
         var result = await Sut.Convert(file);
@@ -61,7 +61,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_Array_Products_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "products.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "products");
 
         // Act
         var result = await Sut.Convert(file);
@@ -74,7 +74,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_DifferentDataTypes_Device_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "device.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "device");
 
         // Act
         var result = await Sut.Convert(file);
@@ -87,7 +87,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_ComplexNested_School_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "school.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "school");
 
         // Act
         var result = await Sut.Convert(file);
@@ -100,7 +100,7 @@ public class JsonToXmlConverterTest
     public async Task Convert_JsonToXml_UniCodeAndSpecialCharacters_Restaurant_Success()
     {
         // Arrange
-        var file = await TestHelpers.GetFileContent(TestFileType, "restaurant.json");
+        var file = await TestHelpers.GetFileContent(TestFileType, "restaurant");
 
         // Act
         var result = await Sut.Convert(file);
