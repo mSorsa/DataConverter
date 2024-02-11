@@ -63,7 +63,7 @@ public sealed class IniToJsonConverter : DataConverter<string, string>
 
     private static object GetDataType(string value)
     {
-        if (value is null)
+        if (string.IsNullOrWhiteSpace(value))
         {
             return null;
         }
