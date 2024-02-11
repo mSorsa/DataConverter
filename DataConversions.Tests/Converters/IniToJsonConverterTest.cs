@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using DataConversions.Converters;
 using JetBrains.Annotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -20,66 +19,70 @@ public class IniToJsonConverterTest
     }
 
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_SimpleKeyValuePairs_ReturnsValidJson()
+    public async Task ConvertIniToJson_SimpleKeyValuePairs_ReturnsValidJson()
     {
         // Arrange
-        var iniContent = @"
+        const string IniContent = @"
 [Section]
 Key1=Value1
 Key2=Value2
 ";
-        var expectedJson = """
-                           {
-                             "Section": {
-                               "Key1": "Value1",
-                               "Key2": "Value2"
-                             }
-                           }
-                           """;
+        const string ExpectedJson = """
+                                    {
+                                      "Section": {
+                                        "Key1": "Value1",
+                                        "Key2": "Value2"
+                                      }
+                                    }
+                                    """;
 
         // Act
-        var jsonResult = await Converter.Convert(iniContent);
+        var jsonResult = await Converter.Convert(IniContent);
 
         // Assert
-        Assert.AreEqual(expectedJson, jsonResult);
+        Assert.AreEqual(ExpectedJson, jsonResult);
     }
 
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_EmptySections_ReturnsEmptyJsonObject()
+    public async Task ConvertIniToJson_EmptySections_ReturnsEmptyJsonObject()
     {
         // Arrange
-        var iniContent = @"
+        const string IniContent = @"
 [EmptySection]
 ";
-        var expectedJson = """
-                           {
-                             "EmptySection": {}
-                           }
-                           """;
+        const string ExpectedJson = """
+                                    {
+                                      "EmptySection": {}
+                                    }
+                                    """;
 
         // Act
-        var jsonResult = await Converter.Convert(iniContent);
+        var jsonResult = await Converter.Convert(IniContent);
 
         // Assert
-        Assert.AreEqual(expectedJson, jsonResult);
+        Assert.AreEqual(ExpectedJson, jsonResult);
     }
 
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_MissingSection_ReturnsEmptyJson()
+    public async Task ConvertIniToJson_MissingSection_ReturnsValidJson()
     {
         // Arrange
-        var iniContent = "KeyWithoutSection=Value";
-        var expectedJson = "{}";
+        const string IniContent = "KeyWithoutSection=Value";
+        const string ExpectedJson = """
+                                    {
+                                      "KeyWithoutSection": "Value"
+                                    }
+                                    """;
 
         // Act 
-        var result = await Converter.Convert(iniContent);
+        var result = await Converter.Convert(IniContent);
 
         // Assert
-        Assert.AreEqual(expectedJson, result);
+        Assert.AreEqual(ExpectedJson, result);
     }
 
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_BasicSection_Success()
+    public async Task ConvertIniToJson_BasicSection_Success()
     {
         // Arrange
         var input = await TestHelpers.GetFileContent(FileType, "Basic");
@@ -93,7 +96,7 @@ Key2=Value2
     }
 
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_DataTypes_Success()
+    public async Task ConvertIniToJson_DataTypes_Success()
     {
         // Arrange
         var input = await TestHelpers.GetFileContent(FileType, "DataTypes");
@@ -107,7 +110,7 @@ Key2=Value2
     }
     
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_DbSettings_Success()
+    public async Task ConvertIniToJson_DbSettings_Success()
     {
         // Arrange
         var input = await TestHelpers.GetFileContent(FileType, "DbSettings");
@@ -121,7 +124,7 @@ Key2=Value2
     }
     
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_NestedSection_Success()
+    public async Task ConvertIniToJson_NestedSection_Success()
     {
         // Arrange
         var input = await TestHelpers.GetFileContent(FileType, "NestedSection");
@@ -135,7 +138,7 @@ Key2=Value2
     }
     
     [TestMethod]
-    public async Task ConvertIniToJsonAsync_SpecialChars_Success()
+    public async Task ConvertIniToJson_SpecialChars_Success()
     {
         // Arrange
         var input = await TestHelpers.GetFileContent(FileType, "SpecialChars");
